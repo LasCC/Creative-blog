@@ -106,9 +106,9 @@ function updateTable($table, $id, $data)
         $i++;
     }
     
-                $sql     = $sql . " WHERE id=?";
-          $data["id"]    = $id;
-                $fetcher = execQuery($sql, $data);
+                      $sql     = $sql . " WHERE id=?";
+                $data["id"]    = $id;
+                      $fetcher = execQuery($sql, $data);
     return $fetcher->affected_rows;
 
 }

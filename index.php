@@ -41,23 +41,23 @@
       </div>
       <!-- Grid layout articles -->
       <div class = "row justify-content-md-center" style = "height: 80vh; margin-top: 105px">
-          <div class = "col-5 blueCard mr-4 mb-4 hoverCard">
-            <h5  style = "font-weight: bold"><?php echo $posts[0]["title"]; ?></h5>
+      <div class = "col-5 blueCard mr-4 mb-4 hoverCard">
+      <h5  style = "font-weight: bold"><?php echo $posts[0]["title"]; ?></h5>
             <span><?php echo $posts[0]["body"]; ?></span>
             <p style = "font-size: 10px; color:#8887B7; margin-top: 10px"><?php echo $posts[0]["user_name"]; ?> - <?php echo date("F j, Y", strtotime($posts[0]["created_at"])); ?></p>
           </div>
           <div class = "col-5 whiteCard mr-4 mb-4 hoverCard">
-            <h5  style = "font-weight: bold"><?php echo $posts[1]["title"]; ?></h5>
+          <h5  style = "font-weight: bold"><?php echo $posts[1]["title"]; ?></h5>
             <span><?php echo $posts[1]["body"]; ?></span>
             <p style = "font-size: 10px; color:#8887B7; margin-top: 10px"><?php echo $posts[1]["user_name"]; ?> - <?php echo date("F j, Y", strtotime($posts[1]["created_at"])); ?></p>
           </div>
           <div class = "col-5 whiteCard mr-4 mb-4 hoverCard">
-            <h5  style = "font-weight: bold"><?php echo $posts[2]["title"]; ?></h5>
+          <h5  style = "font-weight: bold"><?php echo $posts[2]["title"]; ?></h5>
             <span><?php echo $posts[2]["body"]; ?></span>
             <p style = "font-size: 10px; color:#8887B7; margin-top: 10px"><?php echo $posts[2]["user_name"]; ?> - <?php echo date("F j, Y", strtotime($posts[2]["created_at"])); ?></p>
           </div>
           <div class = "col-5 blueCard mr-4 mb-4 hoverCard">
-            <h5  style = "font-weight: bold"><?php echo $posts[3]["title"]; ?></h5>
+          <h5  style = "font-weight: bold"><?php echo $posts[3]["title"]; ?></h5>
             <span><?php echo $posts[3]["body"]; ?></span>
             <p style = "font-size: 10px; color:#8887B7; margin-top: 10px"><?php echo $posts[3]["user_name"]; ?> - <?php echo date("F j, Y", strtotime($posts[3]["created_at"])); ?></p>
           </div>
@@ -73,16 +73,16 @@
       </div>
       <!-- Recent topics -->
       <div style = "margin-top: 105px">
-        <h3  style = "color: #010116; font-weight: bold"><u style = "text-decoration-color: #3941FF">Recent articles</u></h3>
+      <h3  style = "color: #010116; font-weight: bold"><u style = "text-decoration-color: #3941FF">Recent articles</u></h3>
         <?php foreach ($posts as $post): ?>
           <div class = "d-flex whiteCard hoverCard mt-3 mb-3 align-items-center">
-            <div class = "mt-4">
-              <img src   = "https://source.unsplash.com/random" alt = "articleImage" style = "height: 200px; width: auto; border-radius: 6px" />
+          <div class = "mt-4">
+          <img src   = "https://source.unsplash.com/random" alt = "articleImage" style = "height: 200px; width: auto; border-radius: 6px" />
             </div>
               <div  class = "ml-3">
-                <h5   style = "font-weight: bold; color: #010116"><?php echo $post["title"]; ?></h5><br/>
-                <span style = "color: #8887B7"><?php echo $post["body"]; ?></span><br/>
-                <p style = "font-size: 10px; color:#8887B7; margin-top: 10px"><?php echo $posts[3]["user_name"]; ?> - <?php echo date("F j, Y", strtotime($posts[3]["created_at"])); ?></p>
+              <h5   style = "font-weight: bold; color: #010116"><?php echo $post["title"]; ?></h5><br/>
+              <span style = "color: #8887B7"><?php echo $post["body"]; ?></span><br/>
+              <p    style = "font-size: 10px; color:#8887B7; margin-top: 10px"><?php echo $posts[3]["user_name"]; ?> - <?php echo date("F j, Y", strtotime($posts[3]["created_at"])); ?></p>
               </div>
           </div>
         <?php endforeach; ?>

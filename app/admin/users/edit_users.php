@@ -29,7 +29,7 @@
   </head>
 
   <body>
-  <?php include(ROOT_PATH . "/app/components/navbar_dashboard.php") ?>
+  <?php include(ROOT_PATH . "/app/components/navbar_dashboard.php"); ?>
     <div class="container-fluid">
       <div class="row">
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
@@ -54,7 +54,7 @@
               See all the users
             </button>
           </a>
-          <?php include(ROOT_PATH . "/app/components/error_handler_form.php") ?>
+          <?php include(ROOT_PATH . "/app/components/error_handler_form.php"); ?>
           <div class="mt-5">
             <form class="mt-4" action="edit_users.php" method="post">
               <div class="form-group">
@@ -111,7 +111,7 @@
                 />
               </div>
               <div class="custom-control custom-checkbox mt-3 mb-4">
-                <?php if(isset($admin) && $admin == 1) : ?>
+                <?php if(isset($admin) && $admin == 1): ?>
                   <input
                     name="admin"
                     type="checkbox"

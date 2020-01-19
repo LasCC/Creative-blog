@@ -70,16 +70,16 @@
                     <th scope = "row"><?php echo $key + 1; ?></th>
                     <td><?php echo $categorie["name"]; ?></td>
                     <td>
-                      <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Edit">
-                        <a href = "edit_categories.php?id=<?php echo $categorie["id"]; ?>" style = "text-decoration: none">
+                      <button type = "button" class                                                 = "btn btn-secondary" data-toggle = "tooltip" data-placement = "top" title = "Edit">
+                      <a      href = "edit_categories.php?id=<?php echo $categorie["id"]; ?>" style = "text-decoration: none">
                           <i
                             class = "uil uil-edit"
                             style = "font-size: 25px; cursor: pointer; color: #4caf50"
                           ></i>
                         </a>
                       </button>
-                      <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Delete">
-                        <a href = "categories.php?delete_id=<?php echo $categorie["id"]; ?>">
+                      <button type = "button" class = "btn btn-secondary" data-toggle = "tooltip" data-placement = "top" title = "Delete">
+                      <a      href = "categories.php?delete_id=<?php echo $categorie["id"]; ?>">
                           <i
                             class = "uil uil-trash-alt"
                             style = "font-size: 25px; cursor: pointer; color: #e53935"

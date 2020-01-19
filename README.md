@@ -13,14 +13,14 @@ Creative blog is a free to use blog with alot fonctionnamities
 
 # Tech part
 
-This chat app uses a number of open source projects to work properly:
+This blog uses a number of open source projects to work properly:
 
 * PHP
 * phpMyAdmin
 * SQL
 * Bootstrap with material ui
 
-And of course this app itself is open source with a public repository http://github.com/LasCC/creative-blog on Github.
+And of course this blog itself is open source with a public repository http://github.com/LasCC/creative-blog on Github.
 
 ### Installation
 

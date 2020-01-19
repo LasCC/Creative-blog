@@ -16,7 +16,7 @@ Creative blog is a free to use blog with alot fonctionnamities
 This chat app uses a number of open source projects to work properly:
 
 * PHP
-* PHPMyadmin
+* phpMyAdmin
 * SQL
 * Bootstrap with material ui
 

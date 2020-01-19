@@ -35,7 +35,7 @@ Now you can enjoy the blog at "``localhost/blog``"
 
 ### Todos
 
- - Adding the regExp for the register
+ - Add regexr for the register
  - Add Dark mode 
 
 ### Pictures

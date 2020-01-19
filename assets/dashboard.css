@@ -1,0 +1,129 @@
+* {
+	font-family: "Poppins", sans-serif !important;
+}
+
+body {
+	background-color: #f4f7f9 !important;
+}
+
+.sidebar {
+	position: fixed;
+	top : 0;
+	bottom: 0;
+	left: 0;
+	padding : 0;
+	box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+	box-shadow: none !important;
+	background-color: white;
+}
+
+.sidebar-sticky {
+	position : -webkit-sticky;
+	position : sticky;
+	top: 48px;
+	height : calc(100vh - 48px);
+	padding-top: 0.5rem;
+	overflow-x : hidden;
+	overflow-y : auto;
+}
+
+.sidebar .nav-link {
+	font-weight: 500;
+	color: #333;
+}
+
+.sidebar .nav-link .feather {
+	margin-right: 4px;
+	color : #999;
+}
+
+.sidebar .nav-link.active {
+	color: #3941ff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+	color: inherit;
+}
+
+.sidebar-heading {
+	font-size : 0.75rem;
+	text-transform: uppercase;
+}
+
+.navbar-brand {
+	padding-top : 0.75rem;
+	padding-bottom: 0.75rem;
+	font-size : 1rem;
+	background-color: #3941ff;
+}
+
+.navbar .form-control {
+	padding: 0.75rem 1rem;
+	border-width : 0;
+	border-radius: 0;
+}
+
+.form-control-dark {
+	color : #fff;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-control-dark:focus {
+	border-color: transparent;
+}
+
+.border-top {
+	border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.custom-control-input:checked .custom-control-label:before {
+	color : #fff;
+	background-color: #3941ff !important;
+	box-shadow: none;
+}
+
+.custom-file-control,
+.form-control,
+.is-focused .custom-file-control,
+.is-focused .form-control {
+	background-image: linear-gradient(0deg, #3941ff 2px, rgba(0, 150, 136, 0) 0),
+		linear-gradient(0deg, rgba(0, 0, 0, 0.26) 1px, transparent 0);
+	color: black !important;
+}
+
+.custom-control-input:checked ~ .custom-control-label:before {
+	background-color: #3941ff !important;
+}
+
+
+.blueCard {
+	padding : 35px;
+	background-color: #3941ff;
+	color : white;
+	border-radius : 6px;
+}
+
+.whiteCard {
+	padding : 35px;
+	background-color: white;
+	color : #010116;
+	border-radius : 6px;
+}
+
+.hoverCard {
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.hoverCard:hover {
+	transform : translateY(-5px);
+	box-shadow: 0px 10px 45px -6px rgba(0, 0, 0, 0.25) !important;
+}

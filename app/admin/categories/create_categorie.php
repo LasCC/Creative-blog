@@ -1,6 +1,8 @@
 <?php 
     include("../../../path.php");
     include(ROOT_PATH . "/app/controllers/categories.php");
+    include(ROOT_PATH . "/app/controllers/checkUsers.php");
+    adminOnly();
 ?>
 <!DOCTYPE html>
 <html lang = "en">

@@ -2,8 +2,8 @@
 -- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jan 19, 2020 at 12:43 PM
+-- Host: 127.0.0.1
+-- Generation Time: Jan 22, 2020 at 11:39 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -39,12 +39,10 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `description`) VALUES
-(13, 'React', 'Javascript framework.'),
+(13, 'ReactJS', 'Javascript framework.'),
 (15, 'Adobe XD', 'Create shit'),
 (16, 'Front-end developpement', 'Nice btw'),
-(20, 'Some categorie ', 'qsdqsd'),
-(21, 'MacOS', 'Sympathique, nice 20/20'),
-(26, 'Other', 'Some texte here');
+(21, 'MacOS', 'Sympathique, nice 20/20');
 
 -- --------------------------------------------------------
 
@@ -68,11 +66,11 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `user_id`, `categorie_id`, `body`, `image`, `title`, `published`, `created_at`) VALUES
-(9, 24, 26, 'This is a nice text', '1579429001 download.jpeg', 'Hello word ! ', 0, '2020-01-19 10:16:41'),
-(10, 24, 20, 'Yay ! ', '1579429386 blurImage2.jpg', 'Second post !', 1, '2020-01-19 10:23:06'),
-(11, 24, 16, 'Oh my god, this is happening! Updated post', '1579430226 blurImage4.jpg', 'Third post !', 1, '2020-01-19 10:23:52'),
-(12, 24, 21, 'Yeah, this is happening, I can\'t believe this.', '1579429473 blurImage4.jpg', 'Last one!', 1, '2020-01-19 10:24:33'),
-(13, 24, 13, 'Here some content', '1579431671 blurImage4.jpg', 'Some post', 1, '2020-01-19 11:01:11');
+(9, 24, NULL, 'This is a nice text', '1579429001 download.jpeg', 'Hello word ! ', 0, '2020-01-19 10:16:41'),
+(10, 27, 16, 'La &laquo; n&eacute;gation &raquo; de l&rsquo;existence d&rsquo;Isra&euml;l comme Etat est une nouvelle forme d&rsquo;antis&eacute;mitisme. C&rsquo;est ce qu&rsquo;a d&eacute;clar&eacute; mercredi 22 janvier le pr&eacute;sident fran&ccedil;ais, Emmanuel Macron, au premier jour de sa visite &agrave; J&eacute;rusalem. ', '1579730670 9dbbdb2_uwrJpA_-27PL-gG23Qe7S5ox.webp', 'La négation de l’existence d’Israël comme Etat est un antisémitisme », affirme Macron à Jérusalem', 1, '2020-01-19 10:23:06'),
+(11, 27, 16, 'Cet ancien sous-traitant de la CIA a expliqu&eacute; qu&rsquo;apr&egrave;s les attentats qui ont fait 2 976 morts il consid&eacute;rait comme un &laquo; devoir moral &raquo; de pr&eacute;venir toute nouvelle attaque.', '1579730556 9774cfb_b6f863de965046939baf2e5709901d6e-b25fd26b653e40fbba06df95343ea6be-0.webp', 'Un ex-psychologue justifie les tortures infligées par la CIA aux accusés du 11-Septembre', 1, '2020-01-19 10:23:52'),
+(12, 27, 21, 'Dipl&ocirc;m&eacute;e de droit constitutionnel et de droit de l&rsquo;environnement, Ekaterini Sakellaropoulou a notamment soutenu des r&eacute;fugi&eacute;s, des minorit&eacute;s et les libert&eacute;s civiles.', '1579730619 8a08a76_ATH01_GREECE-POLITICS-PRESIDENT_0122_11.webp', 'En Grèce, une femme élue pour la première fois à la présidence de la République', 1, '2020-01-19 10:24:33'),
+(13, 27, 13, 'La prison de R&eacute;au, en Seine-et-Marne, accueille une exposition organis&eacute;e par des d&eacute;tenus &laquo; commissaires &raquo; de bout en bout, du choix des &oelig;uvres &agrave; l&rsquo;&eacute;criture du livret de visite.\r\n', '1579730802 sorciere.jpg', 'Chefs-d’œuvre en prison', 1, '2020-01-19 11:01:11');
 
 -- --------------------------------------------------------
 
@@ -95,7 +93,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `admin`, `user_name`, `email`, `password`, `created_at`) VALUES
 (24, 1, 'Ludovic', 'ludovic@mail.com', '$2y$10$hUWfejJDBUO0eO4B85REoO4VV.wWysFTloT/uWxLvc3OAScKfBcSe', '2020-01-19 09:57:16'),
-(25, 1, 'Sebastien', 'seb@mail.com', '$2y$10$mSxbl4bzglwbaJ0gGFRbXOJ9trPW1O/5LR1gFR9XPb5biWWajtH4K', '2020-01-19 11:36:20');
+(25, 1, 'Sebastien', 'seb@mail.com', '$2y$10$mSxbl4bzglwbaJ0gGFRbXOJ9trPW1O/5LR1gFR9XPb5biWWajtH4K', '2020-01-19 11:36:20'),
+(26, 1, 'Sometest', 'aze@mail.com', '$2y$10$3iFk75sKU/pcsFgLQH9cke2IBRkkNTKVwVns/yWkRj5.HyAf2YfJG', '2020-01-19 12:27:11'),
+(27, 1, 'root', 'root@mail.com', '$2y$10$oa2sehhNtRwc8XjJYggtU.cE5FO3bAZ9Bgj/0.owLMmgcv4FW2eGO', '2020-01-19 12:34:35');
 
 --
 -- Indexes for dumped tables
@@ -142,7 +142,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Constraints for dumped tables

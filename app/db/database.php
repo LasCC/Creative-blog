@@ -5,7 +5,7 @@ require("connect.php");
 
 
 /**
- * displayContent 
+ * fuction displayContent 
  * @param String
  * @return void
  */
@@ -16,7 +16,7 @@ function displayContent($value)
 }
 
 /**
- * Undocumented function
+ * fuction execQuery
  * @param String $sql
  * @param String $data
  * @return void
@@ -33,7 +33,7 @@ function execQuery($sql, $data)
 }
 
 /**
- * Undocumented function
+ * fuction selectAllInTable
  * @param String $table
  * @param Bool $conditions
  * @return void
@@ -66,7 +66,7 @@ function selectAllInTable($table, $conditions = [])
 
 
 /**
- * Undocumented function
+ * function selectOneInTable
  * @param String $table
  * @param Bool $conditions
  * @return void
@@ -86,14 +86,14 @@ function selectOneInTable($table, $conditions)
         $i++;
     }
 
-    $sql     = $sql . " LIMIT 1";                      //Limit with just one
+    $sql     = $sql . " LIMIT 1"; //Limit with just one
     $fetcher = execQuery($sql, $conditions);
     $payload = $fetcher->get_result()->fetch_assoc();
     return $payload;
 }
 
 /**
- * Undocumented function
+ * fuction createTable
  * @param String $table
  * @param String $data
  * @return void
@@ -121,7 +121,7 @@ function createTable($table, $data)
 }
 
 /**
- * Undocumented function
+ * function updateTable
  * @param String $table
  * @param Int $id
  * @param String $data
@@ -151,7 +151,7 @@ function updateTable($table, $id, $data)
 }
 
 /**
- * Undocumented function
+ * fonction deleteTable
  * @param String $table
  * @param Int $id
  * @return void

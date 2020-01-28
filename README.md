@@ -41,13 +41,13 @@ Now you can enjoy the blog at "``localhost/blog``"
 ### Pictures
 
 #### Front
-[![N|Solid](https://i.imgur.com/Weol7HV.png)]()
-[![N|Solid](https://i.imgur.com/YMGjUZd.png)]()
-[![N|Solid](https://i.imgur.com/r2a7EIb.png)]()
-[![N|Solid](https://i.imgur.com/rwrS4nF.png)]()
+[![N|Solid](https://i.imgur.com/KEr2Qhi.png)]()
+[![N|Solid](https://i.imgur.com/oGYjWxA.png)]()
+[![N|Solid](https://i.imgur.com/pufOajK.jpg)]()
+[![N|Solid](https://i.imgur.com/W0fslhJ.png)]()
 
 #### Administration
-[![N|Solid](https://i.imgur.com/2CvB4lV.png)]()
+[![N|Solid](https://i.imgur.com/3Uw3SLe.jpg)]()
 
 
 @LasCC

@@ -2,8 +2,8 @@
 -- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jan 22, 2020 at 11:39 PM
+-- Host: localhost
+-- Generation Time: Jan 28, 2020 at 11:16 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -39,10 +39,10 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `description`) VALUES
-(13, 'ReactJS', 'Javascript framework.'),
-(15, 'Adobe XD', 'Create shit'),
-(16, 'Front-end developpement', 'Nice btw'),
-(21, 'MacOS', 'Sympathique, nice 20/20');
+(13, 'Actualité ', 'Actualité du monde actuelle.'),
+(15, 'Développement', 'Some catégorie about the development topic.'),
+(16, 'Politique', 'Topic about politics, all around the world.'),
+(21, 'IoT', 'Internet of things.');
 
 -- --------------------------------------------------------
 
@@ -94,7 +94,6 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `admin`, `user_name`, `email`, `password`, `created_at`) VALUES
 (24, 1, 'Ludovic', 'ludovic@mail.com', '$2y$10$hUWfejJDBUO0eO4B85REoO4VV.wWysFTloT/uWxLvc3OAScKfBcSe', '2020-01-19 09:57:16'),
 (25, 1, 'Sebastien', 'seb@mail.com', '$2y$10$mSxbl4bzglwbaJ0gGFRbXOJ9trPW1O/5LR1gFR9XPb5biWWajtH4K', '2020-01-19 11:36:20'),
-(26, 1, 'Sometest', 'aze@mail.com', '$2y$10$3iFk75sKU/pcsFgLQH9cke2IBRkkNTKVwVns/yWkRj5.HyAf2YfJG', '2020-01-19 12:27:11'),
 (27, 1, 'root', 'root@mail.com', '$2y$10$oa2sehhNtRwc8XjJYggtU.cE5FO3bAZ9Bgj/0.owLMmgcv4FW2eGO', '2020-01-19 12:34:35');
 
 --

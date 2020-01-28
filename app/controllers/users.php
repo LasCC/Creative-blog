@@ -15,6 +15,12 @@ $password         = "";
 $password_confirm = "";
 $admin            = "";
 
+/**
+ * finction loginUser
+ *
+ * @param String $user
+ * @return void
+ */
 function loginUser($user)
 {
     $_SESSION["id"]        = $user["id"];

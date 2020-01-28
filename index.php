@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.0.1/css/unicons.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800,900&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="./assets/styles.css">
     <title>Creative Blog</title>
 </head>
@@ -25,9 +25,11 @@
         <!-- Hedaer content -->
         <div class="mt-5 d-flex align-items-center" style="height: 90vh;">
             <div style="width: 40%" class="align-items-center">
-                <h2 style="font-weight: bold; margin-bottom: 15px; color: #0D0B6D">Welcome to my Creative Blog the best blog for developper and designer</h2>
-                <span style="color: #8887B7">All of the articles have been written with pure simplicity and i'm too fucking tired what i'm i doing with my life right now.</span><br />
-                <button class="btn" style="background-color: #3941FF; color: white; padding: 15px; font-weight: bold; margin-top: 15px">Let's watch some articles</button>
+                <h2 style="font-weight: bold; margin-bottom: 15px; color: #0D0B6D" class="animated fadeInDown">Welcome to my Creative Blog the best blog for developper and designer</h2>
+                <span style="color: #8887B7" class="animated fadeInDown delay-1s">All of the articles have been written with pure simplicity and i'm too fucking tired what i'm i doing with my life right now.</span><br />
+                <a href="#articles">
+                    <button class="btn animated fadeInDown delay-2s" style="background-color: #3941FF; color: white; padding: 15px; font-weight: bold; margin-top: 15px">Let's watch some articles</button>
+                </a>
             </div>
             <div style="width: 60%; height: 100%">
                 <img src="https://svgur.com/i/HMj.svg" alt="imageHeader" style="height: 100%" />
@@ -137,8 +139,18 @@
             </div>
         </div>
 </body>
-<script src="./assets/scroll.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>
+$("a[href^='#']").click(function(e) {
+    e.preventDefault();
+
+    const position = $($(this).attr("href")).offset().top;
+
+    $("body, html").animate({
+        scrollTop: position
+    }, 2000);
+});
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
 

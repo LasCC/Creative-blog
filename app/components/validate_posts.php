@@ -1,5 +1,10 @@
 <?php 
 
+/**
+ * function validatePost
+ * @param String $post
+ * @return void
+ */ 
 function validatePost($post)
 {
     $errors = array();

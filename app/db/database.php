@@ -3,12 +3,24 @@
 session_start();
 require("connect.php");
 
+
+/**
+ * displayContent 
+ * @param String
+ * @return void
+ */
 function displayContent($value)
 {
     echo "<pre>" . print_r($value, true) . "</pre>";
     die();
 }
 
+/**
+ * Undocumented function
+ * @param String $sql
+ * @param String $data
+ * @return void
+ */
 function execQuery($sql, $data)
 {
     global $conn;
@@ -20,6 +32,12 @@ function execQuery($sql, $data)
     return $fetcher;
 }
 
+/**
+ * Undocumented function
+ * @param String $table
+ * @param Bool $conditions
+ * @return void
+ */
 function selectAllInTable($table, $conditions = [])
 {
     global $conn;
@@ -46,6 +64,13 @@ function selectAllInTable($table, $conditions = [])
     }
 }
 
+
+/**
+ * Undocumented function
+ * @param String $table
+ * @param Bool $conditions
+ * @return void
+ */
 function selectOneInTable($table, $conditions)
 {
     global $conn;
@@ -67,6 +92,12 @@ function selectOneInTable($table, $conditions)
     return $payload;
 }
 
+/**
+ * Undocumented function
+ * @param String $table
+ * @param String $data
+ * @return void
+ */
 function createTable($table, $data)
 {
     // we want to automate this INSERT INTO users SET user_name=?, admin=? , email=? , password=? 
@@ -89,7 +120,13 @@ function createTable($table, $data)
 
 }
 
-
+/**
+ * Undocumented function
+ * @param String $table
+ * @param Int $id
+ * @param String $data
+ * @return void
+ */
 function updateTable($table, $id, $data)
 {
     // we want to au UPDATE users SET user_name=?, admin=? , email=? , password=? WHERE id=?
@@ -113,6 +150,12 @@ function updateTable($table, $id, $data)
 
 }
 
+/**
+ * Undocumented function
+ * @param String $table
+ * @param Int $id
+ * @return void
+ */
 function deleteTable($table, $id)
 {
     // we want to DELETE FROM users WHERE id=?
@@ -134,22 +177,3 @@ function getPublishedUser()
     $payload = $fetcher->get_result()->fetch_all(MYSQLI_ASSOC);
     return $payload;
 }
-
-// $data = [
-//     "user_name" => "TEST",
-//     "admin" => 1,
-//     "email" => "mail@seb.com",
-//     "password" => "password123"
-// ];
-
-// $conditions = [
-//     "admin" => 0,
-//     "user_name" => "Ludovic"
-// ];
-
-// $id = updateTable("users", 2, $data);
-// $id = deleteTable("users", 2);
-// displayContent($id);
-
-// $users = selectOneInTable("users", $conditions);
-// displayContent($users);

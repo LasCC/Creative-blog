@@ -1,5 +1,11 @@
 <?php 
 
+/**
+ * fonction validateCategories
+ *
+ * @param String $categories
+ * @return void
+ */
 function validateCategorie($categories)
 {
     $errors = array();

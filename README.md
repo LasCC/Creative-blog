@@ -24,7 +24,7 @@ And of course this blog itself is open source with a public repository http://gi
 
 ### Installation
 
-The blog is using phpMyAdmin for the database, so you need something like xampp for the server, the database is in the repo here https://github.com/LasCC/Creative-blog/blob/master/blog-2.sql
+The blog is using phpMyAdmin for the database, so you need something like xampp for the server, the database is in the repo here https://github.com/LasCC/creative-blog/blob/master/blog-2.sql
 
 First launch the server, then create a database called : ``blog``.
 Then, go to the database and click on the "Import" button.

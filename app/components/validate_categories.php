@@ -21,4 +21,3 @@ function validateCategorie($categories)
 
     return $errors;
 }
-

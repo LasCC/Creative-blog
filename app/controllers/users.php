@@ -40,14 +40,14 @@ if (isset($_POST["registerBtn"]) || isset($_POST["create-admin"])) {
         
         if (isset($_POST["admin"])) {
             $_POST   ["admin"]   = 1;                                           // user registration is not admnin
-                      $user_id   = createTable($table, $_POST);
+            $user_id   = createTable($table, $_POST);
             $_SESSION["message"] = "Admin user has been created successfully";
             header("location: " . BASE_URL . "app/admin/users/users.php");
             exit();
         } else {
             $_POST["admin"] = 0;                                             // user registration is not admnin
-                   $user_id = createTable($table, $_POST);
-                   $user    = selectOneInTable($table, ["id" => $user_id]);
+            $user_id = createTable($table, $_POST);
+            $user    = selectOneInTable($table, ["id" => $user_id]);
             // log user with session
             loginUser($user);
         }
@@ -80,7 +80,7 @@ if (isset($_POST["update-user"])) {
         unset($_POST["update-user"], $_POST["password_confirm"], $_POST["id"]);
         $_POST   ["password"] = password_hash($_POST["password"], PASSWORD_DEFAULT);
         $_POST   ["admin"]    = isset($_POST["admin"]) ? 1 : 0;
-                  $count      = updateTable($table, $id, $_POST);
+        $count      = updateTable($table, $id, $_POST);
         $_SESSION["message"]  = "Admin user has been updated successfully";
         header("location: " . BASE_URL . "app/admin/users/users.php");
         exit();       
@@ -114,7 +114,7 @@ if (isset($_POST["loginBtn"])) {
 }   
 
 if (isset($_GET["delete_id"])) {
-              $count     = deleteTable($table, $_GET["delete_id"]);
+    $count     = deleteTable($table, $_GET["delete_id"]);
     $_SESSION["message"] = "Admin user has been deleted successfully";
     header("location: " . BASE_URL . "app/admin/users/users.php");
     exit();

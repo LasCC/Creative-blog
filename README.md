@@ -31,8 +31,8 @@ After that you can launch your Apache server, then create a database called : ``
 Then, go to the database and click on the "Import" button.<br/>
 And finally, import the file ``blog-2.sql``
 
-Now you can enjoy the blog at "``localhost/blog``"
-``default admin account: root:toor``
+Now you can enjoy the blog at your local environement (``localhost/blog``)<br>
+default admin account: ``root:toor``
 
 ### Todos
 

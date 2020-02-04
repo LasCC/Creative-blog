@@ -45,8 +45,8 @@
     /**
      * fuction validateLogin
      *
-     * @param String $user 
-     * @return void
+     * @param string $user Username and password of the user
+     * @return string Check if the username and the passsword is empty
      */
     function validateLogin($user)
     {

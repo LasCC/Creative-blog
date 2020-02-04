@@ -1,5 +1,7 @@
 <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="<?php echo BASE_URL . "app/admin/dashboard.php" ?>"><img src="https://svgur.com/i/HM_.svg" alt="logo blog" style="height: 45px" /></a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="<?php echo BASE_URL . "app/admin/dashboard.php" ?>">
+        <img src="https://svgur.com/i/HM_.svg" alt="logo blog" style="height: 45px" />
+    </a>
     <ul class="navbar-nav">
         <div class="d-flex align-items-center">
             <?php if (isset($_SESSION["user_name"])): ?>
@@ -30,17 +32,20 @@
     <div class="sidebar-sticky">
         <ul class="nav flex-column mt-3">
             <li class="nav-item">
-                <a class="nav-link btn text-left" href="<?php echo BASE_URL . "app/admin/posts/posts.php" ?>" style="font-weight: bold"><i class="uil uil-edit mr-2"></i>Post section</a>
+                <a class="nav-link btn text-left" href="<?php echo BASE_URL . "app/admin/posts/posts.php" ?>"
+                    style="font-weight: bold"><i class="uil uil-edit mr-2"></i>Post section</a>
             </li>
         </ul>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link btn text-left" href="<?php echo BASE_URL . "app/admin/users/users.php" ?>" style="font-weight: bold"><i class="uil uil-user-circle mr-2"></i>Users section</a>
+                <a class="nav-link btn text-left" href="<?php echo BASE_URL . "app/admin/users/users.php" ?>"
+                    style="font-weight: bold"><i class="uil uil-user-circle mr-2"></i>Users section</a>
             </li>
         </ul>
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link btn text-left" href="<?php echo BASE_URL . "app/admin/categories/categories.php" ?>" style="font-weight: bold">
+                <a class="nav-link btn text-left" href="<?php echo BASE_URL . "app/admin/categories/categories.php" ?>"
+                    style="font-weight: bold">
                     <i class="uil uil-document-layout-left mr-2"></i>
                     Categories
                     section

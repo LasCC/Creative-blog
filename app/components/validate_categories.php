@@ -3,8 +3,8 @@
 /**
  * fonction validateCategories
  *
- * @param String $categories
- * @return void
+ * @param string $categories The categorie name 
+ * @return string Check if the categories if already exist or not
  */
 function validateCategorie($categories)
 {

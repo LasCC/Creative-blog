@@ -26,13 +26,12 @@ And of course this blog itself is open source with a public repository http://gi
 
 The blog is using phpMyAdmin for the database, so you need something like xampp for the server, the database is in the repo here https://github.com/LasCC/creative-blog/blob/master/blog-2.sql
 
-First, download and then after this put all the files in the repertory ``www`` or ``htdocs`` <br/>
-After that you can launch your Apache server, then create a database called : ``blog``.<br/>
-Then, go to the database and click on the "Import" button.<br/>
-And finally, import the file ``blog-2.sql``
+First launch the server, then create a database called : ``blog``.
+Then, go to the database and click on the "Import" button.
+And finally, import the file ``"blog-2.sql"``
 
-Now you can enjoy the blog at your local environement (``localhost/blog``)<br>
-default admin account: ``root:toor``
+Now you can enjoy the blog at "``localhost/blog``"
+``default admin account: root:toor``
 
 ### Todos
 

@@ -1,8 +1,8 @@
 <?php 
     /**
      * function userOnly
-     * @param Int $redirect
-     * @return void
+     * @param int $redirect id of the user
+     * @return void If there is no userId in the coockie redirection
      */
     function userOnly($redirect = "index.php")
     {
@@ -15,8 +15,8 @@
 
     /**
      * function adminOnly
-     * @param String $redirect
-     * @return void
+     * @param int $redirect ID od admin user
+     * @return void If there is not adminId in the cookie redirection
      */
     function adminOnly($redirect = "index.php")
     {
@@ -29,8 +29,8 @@
 
     /**
      * function guestOnly
-     * @param String $redirect
-     * @return void
+     * @param int $redirect 
+     * @return void if the id in the cookie does not exst in the database redirection
      */
     function guestOnly($redirect = "index.php")
     {

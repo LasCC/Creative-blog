@@ -2,8 +2,8 @@
 
 /**
  * function validatePost
- * @param String $post
- * @return void
+ * @param string $post The post name
+ * @return string Check if the post is already exist and check if all the inputs are complete
  */ 
 function validatePost($post)
 {

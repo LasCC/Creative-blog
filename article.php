@@ -1,6 +1,8 @@
 <?php 
     include("path.php");
     include(ROOT_PATH . "/app/controllers/posts.php");
+    include(ROOT_PATH . "/app/controllers/checkUsers.php");
+    userOnly();
     $post = selectOneInTable("posts", ["id" => $_GET["id"]]);
 ?>
 <!DOCTYPE html>

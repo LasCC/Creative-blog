@@ -6,8 +6,8 @@ require("connect.php");
 
 /**
  * fuction displayContent 
- * @param String
- * @return void
+ * @param string Display the post of the request in a <pre></pre>
+ * @return string The request
  */
 function displayContent($value)
 {
@@ -17,8 +17,8 @@ function displayContent($value)
 
 /**
  * fuction execQuery
- * @param String $sql
- * @param String $data
+ * @param string $sql Request SQL
+ * @param string $data All the return values from the database
  * @return void
  */
 function execQuery($sql, $data)
@@ -34,8 +34,8 @@ function execQuery($sql, $data)
 
 /**
  * fuction selectAllInTable
- * @param String $table
- * @param Bool $conditions
+ * @param string $table Selected table with the string
+ * @param bool $conditions
  * @return void
  */
 function selectAllInTable($table, $conditions = [])
@@ -67,8 +67,8 @@ function selectAllInTable($table, $conditions = [])
 
 /**
  * function selectOneInTable
- * @param String $table
- * @param Bool $conditions
+ * @param string $table Selected table with the string 
+ * @param bool $conditions
  * @return void
  */
 function selectOneInTable($table, $conditions)
@@ -94,8 +94,8 @@ function selectOneInTable($table, $conditions)
 
 /**
  * fuction createTable
- * @param String $table
- * @param String $data
+ * @param string $table Selected table with the string
+ * @param string $data Return all the data from the database
  * @return void
  */
 function createTable($table, $data)
@@ -122,9 +122,9 @@ function createTable($table, $data)
 
 /**
  * function updateTable
- * @param String $table
- * @param Int $id
- * @param String $data
+ * @param string $table Selected table
+ * @param int $id ID
+ * @param string $data
  * @return void
  */
 function updateTable($table, $id, $data)
@@ -152,8 +152,8 @@ function updateTable($table, $id, $data)
 
 /**
  * fonction deleteTable
- * @param String $table
- * @param Int $id
+ * @param string $table
+ * @param int $id
  * @return void
  */
 function deleteTable($table, $id)

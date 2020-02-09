@@ -1,6 +1,6 @@
 [![N|Solid](https://i.imgur.com/ZWWmH1g.png)]()
 
-Creative blog is a free to use blog with alot fonctionnamities
+Creative blog is a free to use blog with a lot functionalities
 
   - Registration of users, login, administration users.
   - Create posts, edit and delete.
@@ -8,7 +8,7 @@ Creative blog is a free to use blog with alot fonctionnamities
 
 # Features!
 
-  - Beautifull interface with a clean dashboard
+  - Beautiful interface with a clean dashboard
   - Out of the box experience
 
 # Tech part
@@ -18,7 +18,7 @@ This blog uses a number of open source projects to work properly:
 * PHP
 * phpMyAdmin
 * SQL
-* Bootstrap with material ui
+* Bootstrap with Material-UI
 
 And of course this blog itself is open source with a public repository http://github.com/LasCC/creative-blog on Github.
 

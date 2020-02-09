@@ -1,6 +1,6 @@
-[![N|Solid](https://i.imgur.com/ZWWmH1g.png)]()
+[![N|Solid](https://i.imgur.com/AvjwHnU.png)]()
 
-Creative blog is a free to use blog with a lot functionalities
+Creative blog is a free to use blog with a lot of functionalities
 
   - Registration of users, login, administration users.
   - Create posts, edit and delete.
@@ -39,13 +39,13 @@ And finally, import the file ``blog-2.sql``
 ### Pictures
 
 #### Front
-[![N|Solid](https://i.imgur.com/KEr2Qhi.png)]()
-[![N|Solid](https://i.imgur.com/oGYjWxA.png)]()
-[![N|Solid](https://i.imgur.com/pufOajK.jpg)]()
-[![N|Solid](https://i.imgur.com/W0fslhJ.png)]()
+[![N|Solid](https://i.imgur.com/hYFCsje.png)]()
+[![N|Solid](https://i.imgur.com/WWHlAYG.png)]()
+[![N|Solid](https://i.imgur.com/qtWTZrU.jpg)]()
+[![N|Solid](https://i.imgur.com/ja4l3Tv.png)]()
 
 #### Administration
-[![N|Solid](https://i.imgur.com/3Uw3SLe.jpg)]()
+[![N|Solid](https://i.imgur.com/foqlsIz.jpg)]()
 
 
 @LasCC

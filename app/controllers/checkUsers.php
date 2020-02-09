@@ -7,7 +7,7 @@
     function userOnly($redirect = "index.php")
     {
         if (empty($_SESSION["id"])) {
-            $_SESSION["message"] = "You need to be loggged to see the page";
+            $_SESSION["message"] = "You need to be logged to see the page";
             header("location: " . BASE_URL . $redirect);
             exit();
         }

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.0.1/css/unicons.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800,900&display=swap" rel="stylesheet" />
     <link href="../../../assets/dashboard.css" rel="stylesheet" />
-    <title>Creative Blog - Create users section</title>
+    <title>Creative Blog - Create administrator section</title>
 </head>
 
 <body>
@@ -26,8 +26,8 @@
                     <h1 style="font-weight: bold">Create user</h1>
                 </div>
                 <a href="<?php echo BASE_URL . "app/admin/users/create_users.php" ?>" style="text-decoration: none">
-                    <button class="btn mr-2" style="background-color: #3941FF; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
-                        Create user
+                    <button class="btn mr-2" style="background-color: #006cff; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
+                    Create administrator user
                     </button>
                 </a>
                 <a href="<?php echo BASE_URL . "app/admin/users/users.php" ?>" style="text-decoration: none">
@@ -63,7 +63,7 @@
                             <label class="custom-control-label" for="customCheck1">Admin user ?</label>
                             <? endif; ?>
                         </div>
-                        <button name="create-admin" type="submit" class="btn mr-2" style="background-color: #3941FF; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
+                        <button name="create-admin" type="submit" class="btn mr-2" style="background-color: #006cff; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
                             Add the user
                         </button>
                     </form>

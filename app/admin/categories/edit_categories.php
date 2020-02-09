@@ -27,7 +27,7 @@
                     <h1 style="font-weight: bold">Edit categorie</h1>
                 </div>
                 <a href="<?php echo BASE_URL . "app/admin/categories/create_categorie.php" ?>" style="text-decoration: none">
-                    <button class="btn mr-2" style="background-color: #3941FF; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
+                    <button class="btn mr-2" style="background-color: #006cff; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
                         Create Categorie
                     </button>
                 </a>
@@ -49,7 +49,7 @@
                             <label for="exampleTextarea" class="bmd-label-floating">Description</label>
                             <textarea name="description" class="form-control" id="exampleTextarea" rows="5"><?php echo $description; ?></textarea>
                         </div>
-                        <button name="update-categorie" type="submit" class="btn mr-2" style="background-color: #3941FF; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
+                        <button name="update-categorie" type="submit" class="btn mr-2" style="background-color: #006cff; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
                             Edit the categorie
                         </button>
                     </form>

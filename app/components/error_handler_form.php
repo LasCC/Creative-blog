@@ -1,5 +1,5 @@
 <?php if(count($errors) > 0): ?>
-<div class="alert alert-danger mt-3" role="alert">
+<div class="alert alert-danger mt-3" role="alert" style="border-radius: 10px">
     <?php foreach ($errors as $error): ?>
     <span><?php echo $error; ?></span>
     <?php endforeach; ?>

@@ -26,7 +26,7 @@
                     <h1 style="font-weight: bold">Create posts for the blog</h1>
                 </div>
                 <a href="<?php echo BASE_URL . "app/admin/posts/create_posts.php" ?>" style="text-decoration: none">
-                    <button class="btn mr-2" style="background-color: #3941FF; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
+                    <button class="btn mr-2" style="background-color: #006cff; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
                         Create post
                     </button>
                 </a>
@@ -74,7 +74,7 @@
                             <label class="custom-control-label" for="customCheck1">Publish the article in public ?</label>
                             <?php endif; ?>
                         </div>
-                        <button name="add-post" type="submit" class="btn mr-2" style="background-color: #3941FF; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
+                        <button name="add-post" type="submit" class="btn mr-2" style="background-color: #006cff; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
                             Add the post
                         </button>
                     </form>

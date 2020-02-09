@@ -52,7 +52,7 @@
                 <div style="margin-top: 105px">
                     <h3 style="color: #010116; font-weight: bold"><u style="text-decoration-color: #3941FF">Recent articles</u></h3>
                     <?php foreach ($posts as $post): ?>
-                    <a href="article.php?id=<?php echo $post["id"]; ?>" style="text-decoration: none">
+                    <a href="<?php echo BASE_URL ?>article.php?id=<?php echo $post["id"]; ?>" style="text-decoration: none">
                         <div class="d-flex whiteCard hoverCard mt-3 mb-3 align-items-center">
                             <img src="<?php echo BASE_URL . "/assets/images/" . $post["image"]; ?>" style="height: 180px; border-radius: 6px" />
                             <div>

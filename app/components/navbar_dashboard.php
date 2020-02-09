@@ -1,13 +1,16 @@
 <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="<?php echo BASE_URL . "app/admin/dashboard.php" ?>">
-        <img src="https://svgur.com/i/HM_.svg" alt="logo blog" style="height: 45px" />
+        <div class="d-flex align-items-center">
+            <img src="https://svgur.com/i/Hr_.svg" alt="logo blog" style="height: 45px" />
+            <h5 style="font-weight: bold; margin-left: 10px; color: white" class="mt-2">Creative Blog</h5>
+        </div>
     </a>
     <ul class="navbar-nav">
         <div class="d-flex align-items-center">
             <?php if (isset($_SESSION["user_name"])): ?>
             <li class="nav-item text-nowrap mr-3">
                 <a href="<?php echo BASE_URL ?>">
-                    <button class="btn" href="#" style="font-weight: bold; color: #3941ff">
+                    <button class="btn" href="#" style="font-weight: bold; color: #006cff">
                         <i class='uil uil-document-layout-left'></i>Blog
                     </button>
                 </a>

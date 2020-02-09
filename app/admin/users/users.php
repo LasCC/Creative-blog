@@ -30,8 +30,8 @@
                 </div>
                 <a href="<?php echo BASE_URL . "app/admin/users/create_users.php" ?>" style="text-decoration: none">
                     <button class="btn mr-2"
-                        style="background-color: #3941FF; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
-                        Create user
+                        style="background-color: #006cff; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
+                        Create administrator user
                     </button>
                 </a>
                 <a href="<?php echo BASE_URL . "app/admin/users/users.php" ?>" style="text-decoration: none">
@@ -41,7 +41,7 @@
                     </button>
                 </a>
                 <?php include(ROOT_PATH . "/app/components/message_handler.php") ?>
-                <div class="mt-5">
+                <div class="mt-5 align-items-center">
                     <table class="table table-borderless">
                         <thead>
                             <tr>

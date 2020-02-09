@@ -3,7 +3,11 @@
 }
 
 body {
-	background-color: #f4f7f9 !important;
+	background-color: white !important;
+}
+
+table td, table th {
+	vertical-align: baseline !important;
 }
 
 .sidebar {
@@ -41,7 +45,7 @@ body {
 }
 
 .sidebar .nav-link.active {
-	color: #3941ff;
+	color: #006cff;
 }
 
 .sidebar .nav-link:hover .feather,
@@ -58,7 +62,7 @@ body {
 	padding-top : 0.75rem;
 	padding-bottom: 0.75rem;
 	font-size : 1rem;
-	background-color: #3941ff;
+	background-color: #006cff;
 }
 
 .navbar .form-control {
@@ -86,7 +90,7 @@ body {
 
 .custom-control-input:checked .custom-control-label:before {
 	color : #fff;
-	background-color: #3941ff !important;
+	background-color: #006cff !important;
 	box-shadow: none;
 }
 
@@ -94,19 +98,19 @@ body {
 .form-control,
 .is-focused .custom-file-control,
 .is-focused .form-control {
-	background-image: linear-gradient(0deg, #3941ff 2px, rgba(0, 150, 136, 0) 0),
+	background-image: linear-gradient(0deg, #006cff 2px, rgba(0, 150, 136, 0) 0),
 		linear-gradient(0deg, rgba(0, 0, 0, 0.26) 1px, transparent 0);
 	color: black !important;
 }
 
 .custom-control-input:checked ~ .custom-control-label:before {
-	background-color: #3941ff !important;
+	background-color: #006cff !important;
 }
 
 
 .blueCard {
 	padding : 35px;
-	background-color: #3941ff;
+	background-color: #006cff;
 	color : white;
 	border-radius : 6px;
 }

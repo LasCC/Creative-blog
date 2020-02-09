@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #fcfcfc !important;
+  background-color: white !important;
 }
 
 .bgHeader {
@@ -14,12 +14,12 @@ body {
 
 .activeLink {
   border-bottom: 2px solid;
-  border-color : #3941ff;
+  border-color : #006cff;
 }
 
 .blueCard {
   padding         : 35px;
-  background-color: #3941ff;
+  background-color: #006cff;
   color           : white;
   border-radius   : 6px;
 }
@@ -45,7 +45,11 @@ body {
 .form-control,
 .is-focused .custom-file-control,
 .is-focused .form-control {
-	background-image: linear-gradient(0deg, #3941ff 2px, rgba(0, 150, 136, 0) 0),
+	background-image: linear-gradient(0deg, #006cff 2px, rgba(0, 150, 136, 0) 0),
 		linear-gradient(0deg, rgba(0, 0, 0, 0.26) 1px, transparent 0);
 	color: black !important;
+}
+
+.image-blog {
+  background-image : url("<?php echo BASE_URL . /assets/images/ . $post[image]; ?>");
 }

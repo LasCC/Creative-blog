@@ -18,7 +18,7 @@ $admin            = "";
 /**
  * finction loginUser
  *
- * @param String $user
+ * @param string userid, username, userisadmin?, message
  * @return void
  */
 function loginUser($user)

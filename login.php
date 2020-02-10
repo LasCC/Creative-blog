@@ -16,21 +16,24 @@
         integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.0.1/css/unicons.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,800,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="./assets/login.css">
     <title>Creative Blog - Login</title>
 </head>
 
 <body>
-    <div class="alignContent">
-        <div class="hoverCard" style="background-color: white; padding: 55px; border-radius: 15px; width: 35%">
-            <a href="<?php echo BASE_URL ?>">
-                <div class="d-flex mt-3 align-items-center">
-                    <img src="./assets/images/elph.svg" alt="logoWebsite" style="height: 70px">
-                    <h5 style="font-weight: bold; margin-left: 10px; color: #010116" class="mt-2">Creative Blog</h5>
-                </div>
-            </a>
-            <?php include(ROOT_PATH . "/app/components/error_handler_form.php") ?>
+    <div class="row">
+        <div class="alignContent col-12 col-sm-4 col-md-4" style="background-color: white; padding: 55px">
             <form class="mt-4" action="login.php" method="post">
+                <a href="<?php echo BASE_URL ?>">
+                    <div class="d-flex mb-3 align-items-center">
+                        <img src="./assets/images/elph.svg" alt="logoWebsite" class="animated fadeInDown"
+                            style="height: 70px">
+                        <h5 style="font-weight: bold; margin-left: 10px; color: #010116"
+                            class="mt-2 animated fadeInDown delay-1s">Creative Blog</h5>
+                    </div>
+                </a>
+                <?php include(ROOT_PATH . "/app/components/error_handler_form.php") ?>
                 <div class="form-group">
                     <label for="exampleInputEmail1" style="color: black">Username</label>
                     <input value="<?php echo $user_name; ?>" name="user_name" type="text" class="form-control"
@@ -52,7 +55,14 @@
                     <a href="<?php echo BASE_URL . 'register.php' ?>"
                         style="color: #006cff; font-weight: bold">Register</a>
                 </p>
+                <p class="text-center" style="font-size: 10px; color: gray">@Ludovic COULON - LasCC on github.</p>
             </form>
+        </div>
+        <div class="alignContent col-12 col-sm-8 col-md-8 d-none d-lg-inline-flex d-md-inline-flex"
+            style="padding: 55px">
+            <h1 style="color: white; font-weight: 13px; font-weight: 600" class="animated fadeInDown delay-2s">Explore
+                <br /><span class="animated fadeInDown delay-3s">new horizons.</span></h1>
+            <img src="https://i.imgur.com/HiSAfJc.png" alt="doodle" style="height: 450px">
         </div>
     </div>
 </body>

@@ -46,6 +46,7 @@ if (isset($_POST["add-post"])) {
     $errors = validatePost($_POST);
 
     if (!empty($_FILES["image"]["name"])) {
+        // add unix time with image name
         $image_name = time() . ' ' . $_FILES["image"]["name"];
         $image_destination = ROOT_PATH . "/assets/images/" . $image_name;
         $result = move_uploaded_file($_FILES["image"]["tmp_name"], $image_destination);

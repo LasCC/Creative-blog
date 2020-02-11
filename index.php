@@ -42,7 +42,8 @@
                             watch some articles</button>
                     </a>
                 </div>
-                <div style="width: 60%; height: 100%" class="mt-5 d-flex align-items-center col-12 col-sm-6 col-md-7 d-none d-lg-inline-flex">
+                <div style="width: 60%; height: 100%"
+                    class="mt-5 d-flex align-items-center col-12 col-sm-6 col-md-7 d-none d-lg-inline-flex">
                     <img src="https://i.imgur.com/VK04CRx.png" alt="imageHeader" class="d-none d-lg-inline-flex"
                         style="width: 100%; margin-left: 50px" />
                 </div>
@@ -85,9 +86,8 @@
         </div>
         <!-- Recent topics -->
         <div style="margin-top: 105px">
-            <h3 style="color: #010116; font-weight: bold"><u style="text-decoration-color: #006cff">Recent
-                    articles</u>
-            </h3>
+            <h3 style="color: #010116; font-weight: bold">Recent articles </h3>
+            <hr/>
             <?php foreach ($posts as $post): ?>
             <a href="article.php?id=<?php echo $post["id"]; ?>" style="text-decoration: none">
                 <div class="d-flex whiteCard hoverCard mt-3 mb-3 align-items-center image-blog">

@@ -30,8 +30,8 @@
                 </div>
                 <a href="<?php echo BASE_URL . "app/admin/users/create_users.php" ?>" style="text-decoration: none">
                     <button class="btn mr-2"
-                        style="background-color: #006cff; color: white; padding: 15px; font-weight: bold; margin-top: 15px">
-                        Create administrator user
+                        style="background-color: #006cff; color: white; padding: 15px; font-weight: bold; margin-top: 15px; border-radius: 5px">
+                        <i class='uil uil-user-plus' style="font-weight: bold"></i> Create administrator user
                     </button>
                 </a>
                 <a href="<?php echo BASE_URL . "app/admin/users/users.php" ?>" style="text-decoration: none">

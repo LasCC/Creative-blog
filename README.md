@@ -39,13 +39,13 @@ And finally, import the file ``blog-2.sql``
 ### Pictures
 
 #### Front
-[![N|Solid](https://i.imgur.com/hYFCsje.png)]()
-[![N|Solid](https://i.imgur.com/WWHlAYG.png)]()
-[![N|Solid](https://i.imgur.com/qtWTZrU.jpg)]()
-[![N|Solid](https://i.imgur.com/ja4l3Tv.png)]()
+[![N|Solid](https://i.imgur.com/hYFCsje.png)](https://i.imgur.com/hYFCsje.png)
+[![N|Solid](https://i.imgur.com/WWHlAYG.png)](https://i.imgur.com/WWHlAYG.png)
+[![N|Solid](https://i.imgur.com/qtWTZrU.jpg)](https://i.imgur.com/qtWTZrU.jpg)
+[![N|Solid](https://i.imgur.com/ja4l3Tv.png)](https://i.imgur.com/ja4l3Tv.png)
 
 #### Administration
-[![N|Solid](https://i.imgur.com/foqlsIz.jpg)]()
+[![N|Solid](https://i.imgur.com/ZFmyzJL.jpg)](https://i.imgur.com/ZFmyzJL.jpg)
 
 
 @LasCC

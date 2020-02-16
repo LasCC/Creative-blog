@@ -38,14 +38,19 @@ And finally, import the file ``blog-2.sql``
 
 ### Pictures
 
-#### Front
-[![N|Solid](https://i.imgur.com/hYFCsje.png)](https://i.imgur.com/hYFCsje.png)
-[![N|Solid](https://i.imgur.com/WWHlAYG.png)](https://i.imgur.com/WWHlAYG.png)
-[![N|Solid](https://i.imgur.com/qtWTZrU.jpg)](https://i.imgur.com/qtWTZrU.jpg)
-[![N|Solid](https://i.imgur.com/ja4l3Tv.png)](https://i.imgur.com/ja4l3Tv.png)
+## Login - Registration
+[![N|Solid](https://i.imgur.com/nexRiou.png)](https://i.imgur.com/nexRiou.png)
+[![N|Solid](https://i.imgur.com/dFpAJB4.png)](https://i.imgur.com/dFpAJB4.png)
 
-#### Administration
-[![N|Solid](https://i.imgur.com/ZFmyzJL.jpg)](https://i.imgur.com/ZFmyzJL.jpg)
+
+## Front
+[![N|Solid](https://i.imgur.com/ElVvroG.png)](https://i.imgur.com/ElVvroG.png)
+[![N|Solid](https://i.imgur.com/R3llEKK.png)](https://i.imgur.com/R3llEKK.png)
+[![N|Solid](https://i.imgur.com/PBniuHX.png)](https://i.imgur.com/PBniuHX.png)
+[![N|Solid](https://i.imgur.com/npGKVe7.png)](https://i.imgur.com/npGKVe7.png)
+
+## Administration
+[![N|Solid](https://i.imgur.com/5KjevCi.png)](https://i.imgur.com/5KjevCi.png)
 
 
 @LasCC

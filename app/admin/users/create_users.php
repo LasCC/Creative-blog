@@ -37,6 +37,12 @@
                 <a href="<?php echo BASE_URL . "app/admin/users/users.php" ?>" style="text-decoration: none">
                     <button class="btn"
                         style="background-color: white; color: black; padding: 15px; font-weight: bold; margin-top: 15px">
+                        See all the administrator users
+                    </button>
+                </a>
+                <a href="<?php echo BASE_URL . "app/admin/users/normal_users.php" ?>" style="text-decoration: none">
+                    <button class="btn"
+                        style="background-color: white; color: black; padding: 15px; font-weight: bold; margin-top: 15px">
                         See all the users
                     </button>
                 </a>
@@ -44,22 +50,22 @@
                 <div class="mt-5">
                     <form class="mt-4" action="create_users.php" method="post">
                         <div class="form-group">
-                            <label for="exampleInputEmail1" style="color: #f6f6f6">Username</label>
+                            <label for="exampleInputEmail1" style="color: gray">Username</label>
                             <input value="<?php echo $user_name ?>" name="user_name" type="text" class="form-control"
                                 id="exampleInputEmail1" placeholder="Username" />
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1" style="color: #f6f6f6">Email</label>
+                            <label for="exampleInputEmail1" style="color: gray">Email</label>
                             <input value="<?php echo $email ?>" name="email" type="text" class="form-control"
                                 id="exampleInputEmail2" placeholder="Email" />
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1" style="color: #f6f6f6">Password</label>
+                            <label for="exampleInputPassword1" style="color: gray">Password</label>
                             <input value="<?php echo $password ?>" name="password" type="password" class="form-control"
                                 id="exampleInputPassword1" placeholder="Password" />
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputPassword1" style="color: #f6f6f6">Password confirmation</label>
+                            <label for="exampleInputPassword1" style="color: gray">Password confirmation</label>
                             <input value="<?php echo $password_confirm ?>" name="password_confirm" type="password"
                                 class="form-control" id="exampleInputPassword1" placeholder="Password confirmation" />
                         </div>

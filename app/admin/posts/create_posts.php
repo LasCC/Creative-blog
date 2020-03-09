@@ -1,4 +1,4 @@
-<?php 
+<?php
     include("../../../path.php");
     include(ROOT_PATH . "/app/controllers/posts.php");
     include(ROOT_PATH . "/app/controllers/checkUsers.php");
@@ -75,7 +75,7 @@
                             </select>
                         </div>
                         <div class="custom-control custom-checkbox mb-3">
-                            <?php if(empty($published)) : ?>
+                            <?php if (empty($published)) : ?>
                             <input name="published" type="checkbox" class="custom-control-input" id="customCheck1" />
                             <label class="custom-control-label" for="customCheck1">Publish the article in public
                                 ?</label>

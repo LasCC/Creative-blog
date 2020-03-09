@@ -1,8 +1,9 @@
-<?php 
+<?php
     include("../../../path.php");
     include(ROOT_PATH . "/app/controllers/users.php");
     include(ROOT_PATH . "/app/controllers/checkUsers.php");
     adminOnly();
+    // displayContent($admin_users)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +38,12 @@
                 <a href="<?php echo BASE_URL . "app/admin/users/users.php" ?>" style="text-decoration: none">
                     <button class="btn"
                         style="background-color: white; color: black; padding: 15px; font-weight: bold; margin-top: 15px">
+                        See all the administrator users
+                    </button>
+                </a>
+                <a href="<?php echo BASE_URL . "app/admin/users/normal_users.php" ?>" style="text-decoration: none">
+                    <button class="btn"
+                        style="background-color: white; color: black; padding: 15px; font-weight: bold; margin-top: 15px">
                         See all the users
                     </button>
                 </a>
@@ -53,6 +60,7 @@
                         </thead>
                         <tbody>
                             <?php foreach ($admin_users as $key => $user): ?>
+                            <?php if ($user["admin"] == 1): ?>
                             <tr>
                                 <th scope="row"><?php echo $key + 1; ?></th>
                                 <td><?php echo $user["user_name"] ?></td>
@@ -75,6 +83,7 @@
                                     </a>
                                 </td>
                             </tr>
+                            <?php endif; ?>
                             <?php endforeach; ?>
                         </tbody>
                     </table>

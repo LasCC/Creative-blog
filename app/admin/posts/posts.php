@@ -1,9 +1,10 @@
-<?php 
+<?php
     include("../../../path.php");
     include(ROOT_PATH . "/app/controllers/posts.php");
     include(ROOT_PATH . "/app/controllers/checkUsers.php");
     adminOnly();
-    $posts = getPublishedUser();
+    $posts = getPublishedPosts();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +39,14 @@
                 <a href="<?php echo BASE_URL . "app/admin/posts/posts.php" ?>" style="text-decoration: none">
                     <button class="btn"
                         style="background-color: white; color: black; padding: 15px; font-weight: bold; margin-top: 15px">
-                        See all the posts
+                        See all the published posts
+                    </button>
+                </a>
+                <a href="<?php echo BASE_URL . "app/admin/posts/posts_unpublished.php" ?>"
+                    style="text-decoration: none">
+                    <button class="btn"
+                        style="background-color: white; color: black; padding: 15px; font-weight: bold; margin-top: 15px">
+                        See all the unpublished posts
                     </button>
                 </a>
                 <?php include(ROOT_PATH . "/app/components/message_handler.php") ?>
@@ -75,7 +83,7 @@
                                                 style="font-size: 25px; cursor: pointer; color: #e53935"></i>
                                         </a>
                                     </button>
-                                    <?php if($post["published"]) : ?>
+                                    <?php if ($post["published"]) : ?>
                                     <a href="edit_posts.php?published=0&p_id=<?php echo $post["id"] ?>">
                                         <button type="button" class="btn btn-secondary" data-toggle="tooltip"
                                             data-placement="top" title="Unpublish">
@@ -113,7 +121,7 @@
     <script>
     $(function() {
         $('[data-toggle="tooltip"]').tooltip()
-    })
+    });
     </script>
 </body>
 

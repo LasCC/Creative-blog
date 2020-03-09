@@ -1,4 +1,4 @@
-<?php 
+<?php
     include("path.php");
     include(ROOT_PATH . "/app/controllers/users.php");
 ?>
@@ -66,6 +66,7 @@
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@mcrowe/html-purifier@0.0.4/lib/index.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
 </script>

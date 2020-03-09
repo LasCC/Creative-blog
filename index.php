@@ -1,7 +1,7 @@
-<?php 
+<?php
   include("path.php");
   include(ROOT_PATH . "/app/controllers/categories.php");
-  $posts = getPublishedUser();
+  $posts = getPublishedPosts();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +36,7 @@
                         written
                         with pure simplicity and i'm too fucking tired what i'm i doing with my life right
                         now.</span><br />
-                    <a href="#articles">
+                    <a data-scroll href="#articles">
                         <button class="btn animated fadeInDown delay-2s"
                             style="background-color: #006cff; color: white; padding: 15px; font-weight: bold; margin-top: 15px">Let's
                             watch some articles</button>
@@ -49,48 +49,65 @@
                 </div>
             </div>
         </div>
-        <!-- Grid layout articles -->
-        <div class="row justify-content-md-center" style="margin-top: 105px" id="articles">
-            <div class="col-12 col-sm-6 col-md-5 blueCard mr-4 mb-4 hoverCard">
-                <a href="article.php?id=<?php echo $posts[0]["id"]; ?>" style="text-decoration : none; color: white">
-                    <h5 style="font-weight: bold"><?php echo $posts[0]["title"]; ?></h5>
-                    <span><?php echo mb_substr($posts[0]["body"], 0, 200) . " ..."; ?></span>
-                    <p style="font-size: 10px; color: #e8e8e8; margin-top: 10px"><?php echo $posts[0]["user_name"]; ?> -
-                        <?php echo date("F j, Y", strtotime($posts[0]["created_at"])); ?></p>
+        <!-- Carousel articles -->
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row justify-content-md-center" style="margin-bottom: 180px">
+                        <div class="col-12 col-sm-6 col-md-5 mr-4 mb-4">
+                            <a href="article.php?id=<?php echo $posts[4]["id"]; ?>"
+                                style="text-decoration : none; color: black" title="<?php echo $posts[4]["title"]; ?>">
+                                <img src="<?php echo BASE_URL . "/assets/images/" . $posts[4]["image"]; ?>"
+                                    style="height: 450px; width: 450px; border-radius: 15px; object-fit: cover" />
+                                <div class="carrousel_content">
+                                    <h5 style="font-weight: bold"><?php echo $posts[4]["title"]; ?></h5>
+                                    <span><?php echo mb_substr($posts[4]["body"], 0, 200) . " ..."; ?></span>
+                                    <p style="font-size: 10px; color: gray; margin-top: 10px">
+                                        <?php echo $posts[4]["user_name"]; ?> -
+                                        <?php echo date("F j, Y", strtotime($posts[4]["created_at"])); ?></p>
+                                </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <?php foreach ($posts as $post): ?>
+                <div class="carousel-item">
+                    <div class="row justify-content-md-center" style="margin-bottom: 180px">
+                        <div class="col-12 col-sm-6 col-md-5 mr-4 mb-4">
+                            <a href="article.php?id=<?php echo $post["id"]; ?>"
+                                style="text-decoration : none; color: black" title="<?php echo $post["title"]; ?>">
+                                <img src="<?php echo BASE_URL . "/assets/images/" . $post["image"]; ?>"
+                                    style="height: 450px; width: 450px; border-radius: 15px; object-fit: cover" />
+                                <div class="carrousel_content">
+                                    <h5 style="font-weight: bold"><?php echo $post["title"]; ?></h5>
+                                    <span><?php echo mb_substr($post["body"], 0, 200) . " ..."; ?></span>
+                                    <p style="font-size: 10px; color: gray; margin-top: 10px">
+                                        <?php echo $post["user_name"]; ?> -
+                                        <?php echo date("F j, Y", strtotime($post["created_at"])); ?></p>
+                                </div>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
                 </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-5 whiteCard mr-4 mb-4 hoverCard">
-                <a href="article.php?id=<?php echo $posts[1]["id"]; ?>" style="text-decoration : none; color: black">
-                    <h5 style="font-weight: bold"><?php echo $posts[1]["title"]; ?></h5>
-                    <span><?php echo mb_substr($posts[1]["body"], 0, 200) . " ..."; ?></span>
-                    <p style="font-size: 10px; color: #636363; margin-top: 10px"><?php echo $posts[1]["user_name"]; ?> -
-                        <?php echo date("F j, Y", strtotime($posts[1]["created_at"])); ?></p>
-                </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-5 whiteCard mr-4 mb-4 hoverCard">
-                <a href="article.php?id=<?php echo $posts[2]["id"]; ?>" style="text-decoration : none; color: black">
-                    <h5 style="font-weight: bold"><?php echo $posts[2]["title"]; ?></h5>
-                    <span><?php echo mb_substr($posts[2]["body"], 0, 200) . " ..."; ?></span>
-                    <p style="font-size: 10px; color: #636363; margin-top: 10px"><?php echo $posts[2]["user_name"]; ?> -
-                        <?php echo date("F j, Y", strtotime($posts[2]["created_at"])); ?></p>
-                </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-5 blueCard mr-4 mb-4 hoverCard">
-                <a href="article.php?id=<?php echo $posts[3]["id"]; ?>" style="text-decoration : none; color: white">
-                    <h5 style="font-weight: bold"><?php echo $posts[3]["title"]; ?></h5>
-                    <span><?php echo mb_substr($posts[3]["body"], 0, 200) . " ..."; ?></span>
-                    <p style="font-size: 10px; color: #e8e8e8; margin-top: 10px"><?php echo $posts[3]["user_name"]; ?> -
-                        <?php echo date("F j, Y", strtotime($posts[3]["created_at"])); ?></p>
+                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
                 </a>
             </div>
         </div>
         <!-- Recent topics -->
-        <div style="margin-top: 105px">
+        <div style="margin-top: 105px" id="articles">
             <h3 style="color: #010116; font-weight: bold">Recent articles </h3>
-            <hr/>
+            <hr />
             <?php foreach ($posts as $post): ?>
-            <a href="article.php?id=<?php echo $post["id"]; ?>" style="text-decoration: none">
-                <div class="d-flex whiteCard hoverCard mt-3 mb-3 align-items-center image-blog">
+            <a href="article.php?id=<?php echo $post["id"]; ?>" style="text-decoration: none"
+                title="<?php echo $post["title"]; ?>">
+                <div class="d-flex whiteCard hoverCard mt-3 mb-3 align-items-center image-blog" id="articles">
                     <div class="d-none d-lg-inline-flex d-md-inline-flex">
                         <img src="<?php echo BASE_URL . "/assets/images/" . $post["image"]; ?>"
                             style="height: 180px; border-radius: 6px" />
@@ -121,6 +138,18 @@
             <p class=" text-center m-3" style="color: #636363; font-size: 10px">@Ludovic COULON - 2020</p>
         </div>
 </body>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
+<script>
+$('#carousel').carousel({
+    interval: 1
+});
+</script>
+<script>
+const scroll = new SmoothScroll('a[href*="#"]', {
+    speed: 1000,
+    easing: 'easeOutCubic'
+});
+</script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"

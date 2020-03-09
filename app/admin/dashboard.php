@@ -1,9 +1,9 @@
-<?php 
+<?php
     include("../../path.php");
     include(ROOT_PATH . "/app/controllers/categories.php");
     include(ROOT_PATH . "/app/controllers/checkUsers.php");
     adminOnly();
-    $posts = getPublishedUser();
+    $posts = getPublishedPosts();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,18 +27,18 @@
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
-                    <h1 style="font-weight: bold">Dashboard</h1>
+                    <h1 style="font-weight: bold">Hi <?php echo $_SESSION["user_name"] ?>, have a great day !</h1>
                 </div>
                 <?php include(ROOT_PATH . "/app/components/message_handler.php") ?>
                 <div class="d-flex align-items-center">
                     <div class="elfsight-app-a3ccfc5c-6e53-4dbb-b3c9-1647a8a63f58"></div>
-                    <div class="elfsight-app-beba78e0-e6df-47c3-b2ff-583737fc080b"></div>
                 </div>
                 <div style="margin-top: 105px">
                     <h3 style="color: #010116; font-weight: bold">Recent articles </h3>
                     <hr />
-                    <?php foreach ($posts as $post): ?>
-                    <a href="article.php?id=<?php echo $post["id"]; ?>" style="text-decoration: none">
+                    <?php foreach ($posts as $post): ?> <a
+                        href="<?php echo BASE_URL ?>article.php?id=<?php echo $post["id"]; ?>"
+                        style="text-decoration: none" title="<?php echo $post["title"]; ?>">
                         <div class="d-flex whiteCard hoverCard mt-3 mb-3 align-items-center image-blog">
                             <div class="d-none d-lg-inline-flex d-md-inline-flex">
                                 <img src="<?php echo BASE_URL . "/assets/images/" . $post["image"]; ?>"

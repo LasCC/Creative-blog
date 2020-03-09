@@ -1,3 +1,4 @@
+<!-- Navbar dashboard component -->
 <nav class="navbar navbar-dark sticky-top flex-md-nowrap p-0">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="<?php echo BASE_URL . "app/admin/dashboard.php" ?>">
         <div class="d-flex align-items-center">
@@ -34,6 +35,12 @@
 <nav class="col-md-2 d-none d-md-block sidebar">
     <div class="sidebar-sticky">
         <ul class="nav flex-column mt-3">
+            <li class="nav-item">
+                <a class="nav-link btn text-left" href="<?php echo BASE_URL . "app/admin/dashboard.php" ?>"
+                    style="font-weight: bold"><i class='uil uil-apps mr-2'></i>Dashboard</a>
+            </li>
+        </ul>
+        <ul class="nav flex-column">
             <li class="nav-item">
                 <a class="nav-link btn text-left" href="<?php echo BASE_URL . "app/admin/posts/posts.php" ?>"
                     style="font-weight: bold"><i class="uil uil-edit mr-2"></i>Post section</a>

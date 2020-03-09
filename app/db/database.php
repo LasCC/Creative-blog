@@ -1,12 +1,11 @@
-<?php 
-
+<?php
 session_start();
 require("connect.php");
 
 
 /**
- * fuction displayContent 
- * @param string Display the post of the request in a <pre></pre>
+ * fuction displayContent
+ * @param string Display the value in a <pre></pre> tag
  * @return string The request
  */
 function displayContent($value)
@@ -16,9 +15,11 @@ function displayContent($value)
 }
 
 /**
- * fuction execQuery
- * @param string $sql Request SQL
- * @param string $data All the return values from the database
+ * execQuery
+ * Execute the query in the database
+ * @param  string $sql
+ * @param  string $data
+ *
  * @return void
  */
 function execQuery($sql, $data)
@@ -28,15 +29,17 @@ function execQuery($sql, $data)
     $values  = array_values($data);
     $types   = str_repeat("s", count($values));
     $fetcher->bind_param($types, ...$values);
-    $fetcher->execute();    
+    $fetcher->execute();
     return $fetcher;
 }
 
 /**
- * fuction selectAllInTable
- * @param string $table Selected table with the string
- * @param bool $conditions
- * @return void
+ * selectAllInTable
+ * Select all the data in the database that the user gives
+ * @param  string $table
+ * @param  bool $conditions
+ *
+ * @return array
  */
 function selectAllInTable($table, $conditions = [])
 {
@@ -50,7 +53,7 @@ function selectAllInTable($table, $conditions = [])
     } else {
         $i = 0;
         foreach ($conditions as $key => $value) {
-            if ($i === 0 ) {
+            if ($i === 0) {
                 $sql = $sql . " WHERE $key=?";
             } else {
                 $sql = $sql . " AND $key=?";
@@ -65,10 +68,13 @@ function selectAllInTable($table, $conditions = [])
 }
 
 
+
 /**
- * function selectOneInTable
- * @param string $table Selected table with the string 
- * @param bool $conditions
+ * selectOneInTable
+ * Select one object in the table that the user gives
+ * @param  string $table
+ * @param  bool $conditions
+ *
  * @return void
  */
 function selectOneInTable($table, $conditions)
@@ -78,7 +84,7 @@ function selectOneInTable($table, $conditions)
 
     $i = 0;
     foreach ($conditions as $key => $value) {
-        if ($i === 0 ) {
+        if ($i === 0) {
             $sql = $sql . " WHERE $key=?";
         } else {
             $sql = $sql . " AND $key=?";
@@ -92,21 +98,24 @@ function selectOneInTable($table, $conditions)
     return $payload;
 }
 
+
 /**
- * fuction createTable
- * @param string $table Selected table with the string
- * @param string $data Return all the data from the database
+ * createTable
+ * Create user in the database
+ * @param  string $table
+ * @param  string $data
+ *
  * @return void
  */
 function createTable($table, $data)
 {
-    // we want to automate this INSERT INTO users SET user_name=?, admin=? , email=? , password=? 
+    // we want to automate this INSERT INTO users SET user_name=?, admin=? , email=? , password=?
     global $conn;
     $sql = "INSERT INTO $table SET ";
 
     $i = 0;
     foreach ($data as $key => $value) {
-        if ($i === 0 ) {
+        if ($i === 0) {
             $sql = $sql . " $key=?";
         } else {
             $sql = $sql . ", $key=?";
@@ -117,14 +126,16 @@ function createTable($table, $data)
     $fetcher = execQuery($sql, $data);
     $id      = $fetcher->insert_id;
     return $id;
-
 }
 
+
 /**
- * function updateTable
- * @param string $table Selected table
- * @param int $id ID
- * @param string $data
+ * updateTable
+ * Update the user in the database
+ * @param  string $table
+ * @param  int $id
+ * @param  string $data
+ *
  * @return void
  */
 function updateTable($table, $id, $data)
@@ -135,7 +146,7 @@ function updateTable($table, $id, $data)
 
     $i = 0;
     foreach ($data as $key => $value) {
-        if ($i === 0 ) {
+        if ($i === 0) {
             $sql = $sql . " $key=?";
         } else {
             $sql = $sql . ", $key=?";
@@ -147,13 +158,15 @@ function updateTable($table, $id, $data)
     $data["id"]    = $id;
     $fetcher = execQuery($sql, $data);
     return $fetcher->affected_rows;
-
 }
 
+
 /**
- * fonction deleteTable
- * @param string $table
- * @param int $id
+ * deleteTable
+ * Delete user in the database with his ID
+ * @param  string $table
+ * @param  int $id
+ *
  * @return void
  */
 function deleteTable($table, $id)
@@ -164,16 +177,35 @@ function deleteTable($table, $id)
 
     $fetcher = execQuery($sql, ["id" => $id]);
     return $fetcher->affected_rows;
-
 }
 
-function getPublishedUser()
+/**
+ * getPublishedPost
+ * Select all the post published (1)
+ * @return string
+ */
+function getPublishedPosts()
 {
     // SELECT * FROM posts WHERE published = 1
     global $conn;
     $sql = "SELECT p.*, u.user_name FROM posts AS p JOIN users AS u ON p.user_id=u.id WHERE p.published = ?";
     
-    $fetcher = execQuery($sql, ["published" => 1]);
+    $fetcher = execQuery($sql, ["published" => 1 ]);
+    $payload = $fetcher->get_result()->fetch_all(MYSQLI_ASSOC);
+    return $payload;
+}
+/**
+ * getUnblishedPost
+ * Select all the unpublished posts
+ * @return string
+ */
+function getUnpublishedPosts()
+{
+    // SELECT * FROM posts WHERE published = 1
+    global $conn;
+    $sql = "SELECT p.*, u.user_name FROM posts AS p JOIN users AS u ON p.user_id=u.id WHERE p.published = ?";
+    
+    $fetcher = execQuery($sql, ["published" => 0 ]);
     $payload = $fetcher->get_result()->fetch_all(MYSQLI_ASSOC);
     return $payload;
 }

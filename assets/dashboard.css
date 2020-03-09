@@ -6,34 +6,35 @@ body {
 	background-color: white !important;
 }
 
-table td, table th {
+table td,
+table th {
 	vertical-align: baseline !important;
 }
 
 .sidebar {
 	position: fixed;
-	top : 0;
+	top: 0;
 	bottom: 0;
 	left: 0;
-	padding : 0;
+	padding: 0;
 	box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .navbar {
 	background-color: white;
-	-webkit-box-shadow: 0px 10px 26px -17px rgba(0,0,0,0.34) !important;
-	-moz-box-shadow: 0px 10px 26px -17px rgba(0,0,0,0.34) !important;
-	box-shadow: 0px 10px 26px -17px rgba(0,0,0,0.34) !important;
+	-webkit-box-shadow: 0px 10px 26px -17px rgba(0, 0, 0, 0.34) !important;
+	-moz-box-shadow: 0px 10px 26px -17px rgba(0, 0, 0, 0.34) !important;
+	box-shadow: 0px 10px 26px -17px rgba(0, 0, 0, 0.34) !important;
 }
 
 .sidebar-sticky {
-	position : -webkit-sticky;
-	position : sticky;
+	position: -webkit-sticky;
+	position: sticky;
 	top: 48px;
-	height : calc(100vh - 48px);
+	height: calc(100vh - 48px);
 	padding-top: 0.5rem;
-	overflow-x : hidden;
-	overflow-y : auto;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 .sidebar .nav-link {
@@ -43,7 +44,7 @@ table td, table th {
 
 .sidebar .nav-link .feather {
 	margin-right: 4px;
-	color : #999;
+	color: #999;
 }
 
 .sidebar .nav-link.active {
@@ -56,25 +57,25 @@ table td, table th {
 }
 
 .sidebar-heading {
-	font-size : 0.75rem;
+	font-size: 0.75rem;
 	text-transform: uppercase;
 }
 
 .navbar-brand {
-	padding-top : 0.75rem;
+	padding-top: 0.75rem;
 	padding-bottom: 0.75rem;
-	font-size : 1rem;
+	font-size: 1rem;
 	background-color: #006cff;
 }
 
 .navbar .form-control {
 	padding: 0.75rem 1rem;
-	border-width : 0;
+	border-width: 0;
 	border-radius: 0;
 }
 
 .form-control-dark {
-	color : #fff;
+	color: black;
 	background-color: rgba(255, 255, 255, 0.1);
 	border-color: rgba(255, 255, 255, 0.1);
 }
@@ -86,12 +87,13 @@ table td, table th {
 .border-top {
 	border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom {
 	border-bottom: 1px solid #e5e5e5;
 }
 
 .custom-control-input:checked .custom-control-label:before {
-	color : #fff;
+	color: black;
 	background-color: #006cff !important;
 	box-shadow: none;
 }
@@ -105,23 +107,23 @@ table td, table th {
 	color: black !important;
 }
 
-.custom-control-input:checked ~ .custom-control-label:before {
+.custom-control-input:checked~.custom-control-label:before {
 	background-color: #006cff !important;
 }
 
 
 .blueCard {
-	padding : 35px;
+	padding: 35px;
 	background-color: #006cff;
-	color : white;
-	border-radius : 6px;
+	color: white;
+	border-radius: 6px;
 }
 
 .whiteCard {
-	padding : 35px;
+	padding: 35px;
 	background-color: white;
-	color : #010116;
-	border-radius : 6px;
+	color: #010116;
+	border-radius: 6px;
 }
 
 .hoverCard {
@@ -130,6 +132,6 @@ table td, table th {
 }
 
 .hoverCard:hover {
-	transform : translateY(-5px);
+	transform: translateY(-5px);
 	box-shadow: 0px 10px 45px -6px rgba(0, 0, 0, 0.25) !important;
 }

@@ -1,3 +1,4 @@
+<!-- Navbar component -->
 <div class="d-flex justify-content-between align-items-center">
     <a href="<?php echo BASE_URL ?>" style="text-decoration: none">
         <div class="d-flex mt-3 align-items-center">
@@ -6,14 +7,14 @@
         </div>
     </a>
     <div class="d-flex mt-3 align-items-center">
-        <?php if(isset($_SESSION["id"])): ?>
+        <?php if (isset($_SESSION["id"])): ?>
         <div class="btn-group">
             <button class="btn dropdown-toggle ml-1" style="font-weight: bold; color: #010116 type=" button"
                 id="buttonMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <?php echo $_SESSION["user_name"]; ?>
             </button>
             <div class="dropdown-menu" aria-labelledby="buttonMenu1">
-                <?php if($_SESSION["admin"]): ?>
+                <?php if ($_SESSION["admin"]): ?>
                 <a class="dropdown-item" href="<?php echo BASE_URL . 'app/admin/dashboard.php' ?>">Dashboard</a>
                 <?php endif; ?>
                 <a class="dropdown-item" style="color: #e53935" href="<?php echo BASE_URL . 'logout.php' ?>">

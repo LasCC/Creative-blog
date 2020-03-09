@@ -46,9 +46,10 @@ And finally, import the file `blog-2.sql`
 ## Front
 
 [![N|Solid](https://i.imgur.com/ElVvroG.png)](https://i.imgur.com/ElVvroG.png)
-[![N|Solid](https://i.imgur.com/R3llEKK.png)](https://i.imgur.com/R3llEKK.png)
+[![N|Solid](https://i.imgur.com/zpT6rQw.png)](https://i.imgur.com/zpT6rQw.png)
 [![N|Solid](https://i.imgur.com/PBniuHX.png)](https://i.imgur.com/PBniuHX.png)
 [![N|Solid](https://i.imgur.com/npGKVe7.png)](https://i.imgur.com/npGKVe7.png)
+[![N|Solid](https://i.imgur.com/wbcS5VI.png)](https://i.imgur.com/wbcS5VI.png)
 
 ## Administration
 

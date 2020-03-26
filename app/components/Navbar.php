@@ -9,13 +9,19 @@
     <div class="d-flex mt-3 align-items-center">
         <?php if (isset($_SESSION["id"])): ?>
         <div class="btn-group">
-            <button class="btn dropdown-toggle ml-1" style="font-weight: bold; color: #010116 type=" button"
+            <button class="btn dropdown-toggle ml-1" style="font-weight: bold; color: #010116"
                 id="buttonMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <?php echo $_SESSION["user_name"]; ?>
             </button>
+            <a href="<?php echo BASE_URL. "search.php"?>">
+                <button class="btn ml-1" style="color: #006cff">
+                    Search <i class="uil uil-search"></i>
+                </button>
+            </a>
             <div class="dropdown-menu" aria-labelledby="buttonMenu1">
                 <?php if ($_SESSION["admin"]): ?>
-                <a class="dropdown-item" href="<?php echo BASE_URL . 'app/admin/dashboard.php' ?>">Dashboard</a>
+                <a class="dropdown-item" href="<?php echo BASE_URL . 'app/admin/dashboard.php' ?>"><i
+                        class="uil uil-dashboard"></i>Dashboard</a>
                 <?php endif; ?>
                 <a class="dropdown-item" style="color: #e53935" href="<?php echo BASE_URL . 'logout.php' ?>">
                     <i class='uil uil-sign-out-alt'></i>Log out

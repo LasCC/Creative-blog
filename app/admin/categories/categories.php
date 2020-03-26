@@ -1,8 +1,9 @@
-<?php 
+<?php
     include("../../../path.php");
     include(ROOT_PATH . "/app/controllers/categories.php");
     include(ROOT_PATH . "/app/controllers/checkUsers.php");
     adminOnly();
+    // displayContent($categories);
 ?>
 <!DOCTYPE html>
 <html lang="en">

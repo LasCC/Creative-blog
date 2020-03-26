@@ -42,9 +42,9 @@ if (htmlspecialchars(isset($_POST["registerBtn"]), ENT_HTML401, "UTF-8") || html
         
         if (isset($_POST["admin"])) { // If the user in an administrator, it will be redirect in the dashboard
             $_POST   ["admin"]   = 1;
-            $user_id   = createTable($table, $_POST);
-            $_SESSION["message"] = "Admin user has been created successfully";
-            header("location: " . BASE_URL . "app/admin/users/users.php");
+            $user_id   = createTable($table, $_POST); // Create user in the database
+            $_SESSION["message"] = "Admin user has been created successfully"; // Display the alert
+            header("location: " . BASE_URL . "app/admin/users/users.php"); // Redirect the user in app/admin/users/users.php
             exit();
         } else { // Else in the blog
             $_POST["admin"] = 0;

@@ -3,7 +3,7 @@
     /**
      * userOnly, redirect the user if the user is not allowed to see the page
      *
-     * @param  string $redirect
+     * @param  string $redirect link of the page 
      *
      * @return void
      */
@@ -20,7 +20,7 @@
     /**
      * adminOnly, redirect the user if they try to go to the dashboard administration
      *
-     * @param  string $redirect
+     * @param  string $redirect link of the page 
      *
      * @return void
      */

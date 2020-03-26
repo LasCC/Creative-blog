@@ -4,9 +4,11 @@ require("connect.php");
 
 
 /**
- * fuction displayContent
- * @param string Display the value in a <pre></pre> tag
- * @return string The request
+ * Display the value in a <pre></pre> tag
+ * 
+ * @param string $value value that you want to display
+ * 
+ * @return string
  */
 function displayContent($value)
 {
@@ -17,7 +19,7 @@ function displayContent($value)
 /**
  * execQuery
  * Execute the query in the database
- * @param  string $sql
+ * @param  string $sql sql table name 
  * @param  string $data
  *
  * @return void
@@ -36,7 +38,7 @@ function execQuery($sql, $data)
 /**
  * selectAllInTable
  * Select all the data in the database that the user gives
- * @param  string $table
+ * @param  string $table sql table name 
  * @param  bool $conditions
  *
  * @return array
@@ -72,7 +74,7 @@ function selectAllInTable($table, $conditions = [])
 /**
  * selectOneInTable
  * Select one object in the table that the user gives
- * @param  string $table
+ * @param  string $table sql table name 
  * @param  bool $conditions
  *
  * @return void
@@ -102,14 +104,14 @@ function selectOneInTable($table, $conditions)
 /**
  * createTable
  * Create user in the database
- * @param  string $table
+ * @param  string $table sql table name 
  * @param  string $data
  *
  * @return void
  */
 function createTable($table, $data)
 {
-    // we want to automate this INSERT INTO users SET user_name=?, admin=? , email=? , password=?
+    // we want to automate this INSERT INTO [users] SET user_name=?, admin=? , email=? , password=?
     global $conn;
     $sql = "INSERT INTO $table SET ";
 
@@ -132,7 +134,7 @@ function createTable($table, $data)
 /**
  * updateTable
  * Update the user in the database
- * @param  string $table
+ * @param  string $table sql table name 
  * @param  int $id
  * @param  string $data
  *
@@ -164,7 +166,7 @@ function updateTable($table, $id, $data)
 /**
  * deleteTable
  * Delete user in the database with his ID
- * @param  string $table
+ * @param  string $table sql table name 
  * @param  int $id
  *
  * @return void
@@ -194,6 +196,32 @@ function getPublishedPosts()
     $payload = $fetcher->get_result()->fetch_all(MYSQLI_ASSOC);
     return $payload;
 }
+
+/**
+ * searchTerm
+ * Search all the articles with the $term argument
+ * @return string
+ */
+function searchTerm($term)
+{
+    $match_query_string = "%" . $term . "%";
+    global $conn;
+    $sql = "SELECT p.*, u.user_name 
+            FROM posts AS p 
+            JOIN users AS u 
+            ON p.user_id=u.id 
+            WHERE p.published = ? 
+            AND p.title 
+            LIKE ? 
+            OR p.body 
+            LIKE ?
+            ";
+    
+    $fetcher = execQuery($sql, ["published" => 1 , "title" => $match_query_string, "body" => $match_query_string]);
+    $payload = $fetcher->get_result()->fetch_all(MYSQLI_ASSOC);
+    return $payload;
+}
+
 /**
  * getUnblishedPost
  * Select all the unpublished posts

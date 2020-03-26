@@ -50,6 +50,7 @@ And finally, import the file `blog-2.sql`
 [![N|Solid](https://i.imgur.com/PBniuHX.png)](https://i.imgur.com/PBniuHX.png)
 [![N|Solid](https://i.imgur.com/npGKVe7.png)](https://i.imgur.com/npGKVe7.png)
 [![N|Solid](https://i.imgur.com/wbcS5VI.png)](https://i.imgur.com/wbcS5VI.png)
+[![N|Solid](https://i.imgur.com/9H0t9aH.png)](https://i.imgur.com/9H0t9aH.png)
 
 ## Administration
 
